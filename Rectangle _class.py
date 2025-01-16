@@ -1,27 +1,55 @@
 class Rectangle:
-    """
-    Клас для представлення прямокутника.
-    """
+    """Клас для представлення прямокутника."""
 
     def __init__(self, init_width: float, init_height: float) -> None:
-        """Ініціалізує прямокутник із заданими шириною та висотою. """
+        """
+        Ініціалізує прямокутник із заданими шириною та висотою.
+
+        Args:
+            init_width (float): Початкова ширина прямокутника.
+            init_height (float): Початкова висота прямокутника.
+        """
         self.width = init_width
         self.height = init_height
 
     def area(self) -> float:
-        """Повертає площу прямокутника."""
+        """
+        Обчислює площу прямокутника.
+
+        Returns:
+            float: Площа прямокутника.
+        """
         return self.width * self.height
 
     def perimeter(self) -> float:
-        """Повертає периметр прямокутника."""
+        """
+        Обчислює периметр прямокутника.
+
+        Returns:
+            float: Периметр прямокутника.
+        """
         return 2 * (self.width + self.height)
 
     def is_square(self) -> bool:
-        """Перевіряє, чи є прямокутник квадратом."""
+        """
+        Перевіряє, чи є прямокутник квадратом.
+
+        Returns:
+            bool: True, якщо прямокутник є квадратом, інакше False.
+        """
         return self.width == self.height
 
     def resize(self, init_new_width: float, init_new_height: float) -> float:
-        """Змінює розміри прямокутника."""
+        """
+        Змінює розміри прямокутника та повертає нову площу.
+
+        Args:
+            init_new_width (float): Нова ширина прямокутника.
+            init_new_height (float): Нова висота прямокутника.
+
+        Returns:
+            float: Нова площа прямокутника.
+        """
         self.width = init_new_width
         self.height = init_new_height
         return self.area()
