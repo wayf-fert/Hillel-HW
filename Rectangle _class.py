@@ -4,12 +4,12 @@ class Rectangle:
     """
 
     def __init__(self, init_width: float, init_height: float) -> None:
-        """ Ініціалізує прямокутник із заданими шириною та висотою. """
+        """Ініціалізує прямокутник із заданими шириною та висотою. """
         self.width = init_width
         self.height = init_height
 
     def area(self) -> float:
-        """ Повертає площу прямокутника."""
+        """Повертає площу прямокутника."""
         return self.width * self.height
 
     def perimeter(self) -> float:
@@ -24,6 +24,7 @@ class Rectangle:
         """Змінює розміри прямокутника."""
         self.width = init_new_width
         self.height = init_new_height
+        return self.area()
 
 
 width = float(input("Enter width of rectangle: "))
@@ -35,7 +36,7 @@ rect = Rectangle(width, height)
 print(f"Width: {rect.width}, Height: {rect.height}")
 print(f"Area: {rect.area()}")
 print(f"Perimetr: {rect.perimeter()}")
-print(f"Is square?: {'YES' if rect.is_square() else 'NO'}")
+print(f"Is square?: {'YES' if rect.is_square() else 'NO'}\n")
 
 # Змінюємо розміри прямокутника
 new_width = float(input("Enter new width rectangle: "))
@@ -47,4 +48,4 @@ print("\nAfter changes:")
 print(f"Width: {rect.width}, Height: {rect.height}")
 print(f"Area: {rect.area()}")
 print(f"Perimetr: {rect.perimeter()}")
-print(f"Is square?:  {'YES' if rect.is_square() else 'NO'}")
+print(f"Is square?:  {'YES' if rect.is_square() else 'NO'}\n")
