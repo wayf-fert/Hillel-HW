@@ -1,7 +1,7 @@
 import math
 
 
-def calculate_circle_area(r):  # Обчислює площу кола за його радіусом.
+def calculate_circle_area(r: float) -> float:  # Обчислює площу кола за його радіусом.
     return math.pi * r ** 2
 
 

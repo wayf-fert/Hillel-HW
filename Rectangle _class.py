@@ -3,27 +3,27 @@ class Rectangle:
     Клас для представлення прямокутника.
     """
 
-    def __init__(self, width, height):
+    def __init__(self, init_width: float, init_height: float) -> None:
         """ Ініціалізує прямокутник із заданими шириною та висотою. """
-        self.width = width
-        self.height = height
+        self.width = init_width
+        self.height = init_height
 
-    def area(self):
+    def area(self) -> float:
         """ Повертає площу прямокутника."""
         return self.width * self.height
 
-    def perimeter(self):
+    def perimeter(self) -> float:
         """Повертає периметр прямокутника."""
         return 2 * (self.width + self.height)
 
-    def is_square(self):
+    def is_square(self) -> bool:
         """Перевіряє, чи є прямокутник квадратом."""
         return self.width == self.height
 
-    def resize(self, new_width, new_height):
+    def resize(self, init_new_width: float, init_new_height: float) -> float:
         """Змінює розміри прямокутника."""
-        self.width = new_width
-        self.height = new_height
+        self.width = init_new_width
+        self.height = init_new_height
 
 
 width = float(input("Enter width of rectangle: "))
